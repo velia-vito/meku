@@ -1,6 +1,6 @@
 # Meku UI
 
-__TL; DR__ A UI Library meant primarily for creative workflows.
+__TL; DR__ z.
 
 Most UI Libraries are aimed at very specific use cases. Both Microsoft's Fluent and Google's
 Material3 are aimed for general purpose application where the primary interactions are data entry
