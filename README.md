@@ -1,6 +1,6 @@
 # Meku UI
 
-__TL; DR__ z.
+__TL; DR__ A UI Kit for Flutter aimed at creative applications/workflows.
 
 Most UI Libraries are aimed at very specific use cases. Both Microsoft's Fluent and Google's
 Material3 are aimed for general purpose application where the primary interactions are data entry
@@ -20,13 +20,23 @@ Meku UI is organize along
 this section serves as an idex to quickly locate the relevant documentation for various UI elements.
 Everything is listed in alphabetical order.
 
-### Atoms
-
-These are the most fundamental, granular UI elements. You might want to start with
-[Meku's Design Principles](docs/design-principles.md) to understand the philosophy behind Meku's
-design.
+### Key Ideas (Start With These)
 
 - [Design Principles](docs/design-principles.md)
+
+### Developer Considerations
+
+- [Library Structure](docs/meta-library-structure.md)
+
+- [Miscellaneous Guidelines](docs/misc-guidelines.md)
+
+### Atoms
+
+These are the most fundamental, granular UI elements.
+
+- [Design Principles](docs/design-principles.md)
+
+- [Color](docs/color.md)
 
 ### Molecules
 
