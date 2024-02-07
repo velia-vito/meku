@@ -40,12 +40,6 @@ dart_code_metrics:
     - avoid-redundant-async
     - avoid-unnecessary-conditionals
     - double-literal-format
-    - format-comment:
-        ignored-patterns:
-          - ^ {@
-          - ^ \#
-          - ^ ```
-          - ^ <!
     - member-ordering
     - newline-before-return
     - no-magic-number:
@@ -55,7 +49,7 @@ dart_code_metrics:
     - prefer-commenting-analyzer-ignores
     - prefer-conditional-expressions
     - refer-correct-identifier-length:
-        max-identifier-length: 30
+        max-identifier-length: 20
         min-identifier-length: 4
     - prefer-first
     - prefer-immediate-return
