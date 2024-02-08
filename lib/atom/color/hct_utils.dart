@@ -36,15 +36,6 @@ extension HctUtils on Hct {
     return min(lineDistance, loopDistance);
   }
 
-  /// Change the tone of this HCT color.
-  Hct withTone(double newTone) => Hct.from(hue, chroma, newTone);
-
-  /// Change the chroma of this HCT color.
-  Hct withChroma(double newChroma) => Hct.from(hue, newChroma, tone);
-
-  /// Change the hue of this HCT color.
-  Hct withHue(double newHue) => Hct.from(newHue, chroma, tone);
-
   /// The ARGB [Color] equivalent of this HCT color.
   Color get asColor => Color(toInt());
 }
