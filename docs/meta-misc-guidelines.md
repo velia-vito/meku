@@ -2,22 +2,22 @@
 
 ## Documentation Comments
 
-Format to be used is:
+- Format to be used is:
 
-```dart
-/// A simple one/two-line description of the class/method
-///
-/// ### Args (only when args are not self-explanatory)
-/// - `argName`: Description of the argument
-///
-/// ### Errors (only when errors are explicitly thrown)
-/// - `ErrorType`: Cause of the error and potential solution
-///
-/// ### Notes (as per develop descretion)
-/// - Note 1
-///
-/// - Note 2
-```
+  ```dart
+  /// A simple one/two-line description of the class/method
+  ///
+  /// ### Args (only when args are not self-explanatory)
+  /// - `argName`: Description of the argument
+  ///
+  /// ### Errors (only when errors are explicitly thrown)
+  /// - `ErrorType`: Cause of the error and potential solution
+  ///
+  /// ### Notes (as per develop descretion)
+  /// - Note 1
+  ///
+  /// - Note 2
+  ```
 
 - Try to avoid using subheadings unless absolutely necessary, do not mentions specific args in the
   one line description either. Rely on the context provided by the method signature if possible.

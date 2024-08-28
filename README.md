@@ -28,7 +28,7 @@ Everything is listed in alphabetical order.
 
 - [Library Structure](docs/meta-library-structure.md)
 
-- [Miscellaneous Guidelines](docs/misc-guidelines.md)
+- [Miscellaneous Guidelines](docs/meta-misc-guidelines.md)
 
 ### Atoms
 
