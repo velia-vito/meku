@@ -3,13 +3,13 @@ part of '../color.dart';
 /// Collection of all possible colors that may be used across a Meku App.
 class ColorPalette {
   /// Colors used for surfaces/containers.
-  late final ColorStrip surface;
+  late final ColorSwatch surface;
 
   /// Colors used for highlights/successes.
-  late final ColorStrip highlight;
+  late final ColorSwatch highlight;
 
   /// Colors used for errors/warnings.
-  late final ColorStrip warning;
+  late final ColorSwatch warning;
 
   /// Creates a color palette with specific colors.
   ColorPalette.custom({
@@ -17,9 +17,9 @@ class ColorPalette {
     required Color highlight,
     required Color warning,
   }) {
-    this.surface = ColorStrip(MHct.fromColor(surface));
-    this.highlight = ColorStrip(MHct.fromColor(highlight));
-    this.warning = ColorStrip(MHct.fromColor(warning));
+    this.surface = ColorSwatch(MHct.fromColor(surface));
+    this.highlight = ColorSwatch(MHct.fromColor(highlight));
+    this.warning = ColorSwatch(MHct.fromColor(warning));
   }
 
   /// Generate a color palette from a seed color.
@@ -69,16 +69,16 @@ class ColorPalette {
     // Find Warning Color.
     var warning = warningT.closestHue(candidateColors: colorSet);
     colorSet.remove(warning); //ignore: avoid-ignoring-return-values, return value unused
-    this.warning = ColorStrip(warning);
+    this.warning = ColorSwatch(warning);
 
     // Find Surface Color.
     var surface = surfaceT.closestHue(candidateColors: colorSet);
     colorSet.remove(surface); //ignore: avoid-ignoring-return-values, return value unused
-    this.surface = ColorStrip(surface);
+    this.surface = ColorSwatch(surface);
 
     // Find Highlight Color.
     var highlight = highlightT.closestHue(candidateColors: colorSet);
     colorSet.remove(highlight); //ignore: avoid-ignoring-return-values, return value unused
-    this.highlight = ColorStrip(highlight);
+    this.highlight = ColorSwatch(highlight);
   }
 }

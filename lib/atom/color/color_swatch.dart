@@ -1,9 +1,10 @@
 part of '../color.dart';
 
-class ColorStrip {
+/// A Color Swatch containing 10 tones of a base color (from white to black.)
+class ColorSwatch {
   MHct baseColor;
 
-  ColorStrip(this.baseColor);
+  ColorSwatch(this.baseColor);
 
   MHct operator [](int toneIndex) {
     if (toneIndex < 0 || toneIndex > 10) {

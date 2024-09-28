@@ -47,6 +47,7 @@ class MHct {
     return MHct.from(hue, chroma, newTone);
   }
 
+  /// Find MHct color with closest Hue to this color.
   MHct closestHue({required List<MHct> candidateColors}) {
     var closestColor = candidateColors.first;
     var closestDistance = double.infinity;
