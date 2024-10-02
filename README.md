@@ -1,76 +1,270 @@
 # Meku UI
 
-__TL; DR__ A UI Kit for Flutter aimed at creative applications/workflows.
+<center>
 
-Most UI Libraries are aimed at very specific use cases. Both Microsoft's Fluent and Google's
-Material3 are aimed for general purpose application where the primary interactions are data entry
-and data display. Apple's Human Interface Guidelines are more of a collection of general principles
-coupled with well designed components more than a dedicated UI library. IBM's Carbon design is
-primarily targeted at enterprise level data analytics applications and it shows in Carbon Design's
-focus on clarity in data presentation. Meku (The *romaji* for "make") is similarly primarily
-targeted at creative workflows, it draws inspiration from the UIs of creative applications like Code
-IDE's, Editing software like Premier Pro & Clip Studio Paint, and Game UIs. THe aim is to allow you
-a foundational UI toolkit that allows you to create User Interfaces that look good and help users
-create what they want without having to fight the application itself.
+| UI Design System     | Use Case                                                                                                     | Visual Style                                                                                                          |
+| -------------------- | ------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------- |
+| Material 3           | Android-first Adaptive Applications with consistent experience across devices                                | Flat design with emphasis on color, typography, and spacing.                                                          |
+| Fluent               | Windows-first Adaptive Applications with a focus on natural interaction and device specific controls/layouts | Acrylic effect (glass morphism), depth effects, and a focus on natural light and motion.                              |
+| IBM Carbon           | Focus on simplicity, clarity, and accessibility. Especially for data visualization and documentation.        | Flat design with a focus on clean lines, neutral colors, and a sans-serif typeface.                                   |
+| Ant Design           | Focus on efficiency, performance, and a responsive design for enterprise applications                        | Flat design with a focus on simplicity, clarity, and a consistent experience across different (desktop) screen sizes. |
+| Foundation/Bootstrap | Responsivity & Modularity for web applications                                                               | Flat design with a focus on simplicity, clarity, and a consistent experience across different screen sizes.           |
 
-## Generating Full Documentation
+*Table 1. Most UI Libraries are aimed at a very specific use case.*
 
-```ps
-dart doc --output docs
-```
+</center>
+
+> メイク /meɪkuː/ (*Romanji **me-ku***) **1. *verb*** form (something) by putting parts together or
+> combining substances; create **2. *verb*** cause (something) to exist or come about; bring about.
+> **3. *verb*** constitute; amount to; develop into.
+
+As the definition implies, Meku is primarily targeted at applications meant for creating things. and
+is inspired by the UIs of creative applications like:
+
+- Code IDE's (eg. VS Code, Dreamweaver, Visual Studio)
+
+- Editing software (eg. Photoshop, Premier Pro, Lightroom)
+
+- Art software (eg. Clip Studio Paint, Blender, Krita)
+
+- Engineering software (eg. SolidWorks, Ansys)
+
+- Game UI (eg. Baldur's Gate 3, Cyberpunk 2077)
+
+The aim is to allow you a minimal UI toolkit that allows you to create User Interfaces that look
+good and help users create what they want without having to fight/learn the application itself —
+**basically, good Creative Application UI made easy.**
 
 ## Understanding Meku
 
-Meku UI is organize along
-[Atomic Design Principles](https://uxdesign.cc/grouping-components-in-atomic-design-systems-4d6e2095ea45),
-this section serves as an idex to quickly locate the relevant documentation for various UI elements.
-Everything is listed in alphabetical order.
+### Atomic Design
 
-### Key Ideas (Start With These)
+Meku is organized based on the
+[Atomic Design Principles](https://bradfrost.com/blog/post/atomic-web-design/) where Atoms →
+Molecules → Organisms → Templates → Pages:
 
-- [Design Principles](#mekus-design-principles)
+1. **Atoms** The basic building blocks of the UI such as a form label, an input, or a button. Atoms
+   can also include more abstract elements like color palettes, fonts and even more invisible
+   aspects of an interface like animations.
 
-### Developer Considerations
+2. **Molecules** Molecules are groups of atoms bonded together *to serve some purpose*. For example,
+   a form label, input, and button aren’t too useful by themselves, but combine them together and
+   you have a search box.
 
-- [Library Structure](#library-structure)
+3. **Organisms** Organisms are groups of molecules joined together to form a *relatively complex,
+   distinct section of an interface*. For example, a navigation bar.
 
-- [Documentation Guidelines](#documentation-guidelines)
+4. **Templates** Templates are *page-level objects* that place components into a layout to
+   communicate information or enable actions.
 
-### Atoms
+5. **Pages** Pages are specific instances of templates that show what a UI looks like with real
+   content in place.
 
-These are the most fundamental, granular UI elements.
+### Visual Design
 
-- [Design Principles](#mekus-design-principles)
-- Color (see Library Docs under `atom/color`)
+### Functional Design Principles
 
-### Molecules
+### Design Rationale behind specific elements
 
-### Organisms
+The specific choices behind the design of almost every element in Meku is outlined in the
+library-level documentation of the element. Use the below command to generate documentation with
+minimal errors.
 
-<!-- ### Templates -->
-
-<!--
-## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to start using the package.
-
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples to `/example` folder.
-
-```dart
-const like = 'sample';
+```ps
+PS> dart doc --output docs
 ```
 
-## Additional information
+## Developing Meku
 
-TODO: Tell users more about the package: where to find more information, how to contribute to the
-package, how to file issues, what response they can expect from the package authors, and more. -->
+### Library Structure
 
+Meku heavily relies on the `part`/`part of` directives to prevent colossally long files by splitting
+libraries into multiple files. The folder/code structure is as follows:
+
+1. Each Element of the UI is organized into one of 4 folders (atom, molecule, organism, template):
+
+   ```text
+   ===========================================
+   == Example of the structure of a UI Atom ==
+   ===========================================
+
+   lib
+   └─ atom
+      ├─ element
+      │  ├─ element_subpart_1.dart
+      │  ├─ element_subpart_2.dart
+      │  ├─ element_subpart_3.dart
+      |  └─ ...
+      |
+      └─ element.dart (library level explanation/documentation goes here) 
+   ```
+
+2. Each subpart contains a ***single*** class or widget.
+
+3. Explicitly use the `library` keyword in the element.dart file.
+
+4. Use the `part`/`part of` directive to split the element into multiple files. (see
+   `lib/atom/color/...` for more details)
+
+   - Directory Structure
+
+     ```text
+     ================================
+     == Example color.dart library ==
+     ================================
+
+     lib
+     └─ atom
+        ├─ color
+        │  ├─ color_palette.dart     (uses color_swatch & mhct to generate color palette)
+        │  ├─ color_swatch.dart      (color swatch class)
+        │  └─ mhct.dart              (HCT wrapper with utility functions)
+        |
+        └─ color.dart                (combines everything, has library documentation)
+     ```
+
+   - The `color_palette.dart`, `color_swatch.dart`, and `mhct.dart` files start with
+
+     ```dart
+     part of '../color.dart';
+     ```
+
+   - The `color.dart` file starts with
+
+     ```dart
+     /// Library Level Documentation
+     library color;
+
+     // Imports
+
+     // Sub Parts
+     part 'color/mhct.dart';            // Code in mhct.dart is symbolically placed here
+     part 'color/color_swatch.dart';    // Code in color_swatch.dart is symbolically placed here
+     part 'color/color_palette.dart';   // Code in color_palette.dart is symbolically placed here
+     ```
+
+### Variable Naming Conventions
+
+1. - Use dummy variables like `_` or `__` when you need to use a variable but don't need its value.
+     This is to avoid the `unused_local_variable` warning.
+
+### Documentation Comment Format
+
+```dart
+/// A simple one/two-line description of the class/method
+///
+/// ### Args (only when args are not self-explanatory)
+/// - `argName`: Description of the argument
+///
+/// ### Errors (only when errors are explicitly thrown)
+/// - `ErrorType`: Cause of the error and potential solution
+///
+/// ### Notes (as per develop descretion)
+/// - Note 1
+///
+/// - Note 2
+```
+
+1. Try to avoid using `Args`, `Errors`, and `Notes` unless absolutely necessary, do not mentions
+   specific args in the one line description either. Rely on the context provided by the method
+   signature if possible.
+
+   - **Example 1** When to avoid Documentation Sub-Sections.
+
+     ```dart
+     /// Find the the Color with the closest Hue to the target color from the given colors.
+     static Hct closestHue({required Hct targetColor, required List<Hct> candidateColors})
+     ```
+
+     Note how `targetColor` and `candidateColors` are not mentioned in the one line description, but
+     you still know what they are. All documentation comments carry limited context, use it.
+
+   - **Example 2** When to use Documentation Sub-Sections.
+
+     ```dart
+     /// Generate a color palette from a seed color.
+     ///
+     /// ### Args
+     /// - `minHueDist`, `maxHueDist`: Minimum/Maximum distance between any two
+     /// color palette hues in deg.
+     ///
+     /// - `warningTarget`, `surfaceTarget`, and `highlightTarget`: Target colors
+     /// for warning/surface/highlight colors (see Note).
+     ///
+     /// ### Note
+     /// - If target colors are specified, the closest color to the target is used
+     /// for the corresponding color-function.
+     ///
+     /// - If no target colors are specified, warning, surface and highlight color
+     /// targets are set to red, blue and green respectively.
+     ColorPalette.fromSeed(
+       Color seedColor, {
+       int minHueDist = 90,
+       int maxHueDist = 120,
+       Hct? warningTarget,
+       Hct? surfaceTarget,
+       Hct? highlightTarget,
+     })
+     ```
+
+     - `minHueDist`, `maxHueDist`, `warningTarget`, `surfaceTarget`, and `highlightTarget` are not
+       clearly obvious from the method signature, so they are mentioned in the documentation
+       comment.
+
+     - Similarly, the default target colors are mentioned in notes section as they are an additional
+       pieces of information that may be important to users and not directly relevant to the
+       function.
+
+2. Avoid using the `[ClassName]` style documentation linking when the specific class is implied by
+   the context.
+
+   - **Example 3**
+
+     ```dart
+     /// Convert an ARGB color to the HCT equivalent.
+     static Hct fromColor(Color color) => Hct.fromInt(color.value);
+     ```
+
+     The one-liner could have been `/// Convert a [Color] to the [Hct] equivalent`, but both `Color`
+     and `Hct` are implied by the context, so they are not mentioned.
+
+### Logging Format
+
+Use one of the following formats for all Debug Logging:
+
+1. ```text
+    LibraryName/ClassName/MethodName: Message
+   ```
+
+2. ```text
+    ClassName/MethodName: Message
+   ```
+
+3. ```text
+    ProcessName/MethodName: Message
+   ```
+<!-- 
+
+## Meku's Visual Design
+
+Mostly Inspired by Teenage Engineering's Minimal Retro-Futurism
+
+- Thumb Wheels
+
+- Buttons
+
+- Sliders
+
+- Knobs
+
+- Geometric Shapes delimited by grooves
+
+- clicky circles
+
+1. Dense Functionality
+
+2. Limited Color Palette -->
+<!-- 
 ## Meku's Design Principles
 
 The is the third iteration of Design Principles for Meku. In my personal opinions, the first two
@@ -129,155 +323,4 @@ doing forever.
 The UI should be designed to help the user create what they want. For one, it makes no sense to
 structure a wordprocessors UI like a digital art application. FOr another, I absolutely hate it when
 theres so many toolbars that my work area is reduced to a tiny sliver of screen real estate. So,
-specialize for the task at hand and maximize the work area.
-
-## Library Structure
-
-1. Each Element of the UI is organized as such (see example at point 4):
-
-   ```text
-   atom/molecule/organism/template
-   ├─ element
-   │  ├─ element_subpart1.dart
-   │  ├─ element_subpart2.dart
-   │  ├─ element_subpart3.dart
-   |  └─ ...
-   └─ element.dart (library level explanation/documentation goes here) 
-   ```
-
-2. Each subpart contains a single class.
-
-3. Explicitly use the `library` keyword in the element.dart file.
-
-4. Use the `part`/`part of` directive to split the element into multiple files. (see
-   `lib/atom/color/...`)
-
-   ```text
-   <!-- Example color.dart library -->
-   lib
-   └─ atom
-      ├─ color
-      │  ├─ color_palette.dart     (uses color_swatch & mhct to generate color palette)
-      │  ├─ color_swatch.dart      (color swatch class)
-      │  └─ mhct.dart              (HCT wrapper with utility functions)
-      |
-      └─ color.dart                (collets color_palette, color_swatch, and mhct, has library documentation)
-   ```
-
-   - The `color_palette.dart`, `color_swatch.dart`, and `mhct.dart` files start with
-
-     ```dart
-     part of '../color.dart';
-     ```
-
-   - The `color.dart` file starts with
-
-     ```dart
-     /// Library Level Documentation
-     library color;
-
-     // Imports
-
-     // Sub Parts
-     part 'color/mhct.dart';
-     part 'color/color_swatch.dart';
-     part 'color/color_palette.dart';
-     ```
-
-## Documentation Guidelines
-
-### Documentation Comments
-
-- Format to be used is:
-
-  ```dart
-  /// A simple one/two-line description of the class/method
-  ///
-  /// ### Args (only when args are not self-explanatory)
-  /// - `argName`: Description of the argument
-  ///
-  /// ### Errors (only when errors are explicitly thrown)
-  /// - `ErrorType`: Cause of the error and potential solution
-  ///
-  /// ### Notes (as per develop descretion)
-  /// - Note 1
-  ///
-  /// - Note 2
-  ```
-
-- Try to avoid using subheadings unless absolutely necessary, do not mentions specific args in the
-  one line description either. Rely on the context provided by the method signature if possible.
-
-  __Example 01__
-
-  ```dart
-  /// Find the the Color with the closest Hue to the target color from a collection of HCT colors.
-  static Hct closestHue({required Hct targetColor, required List<Hct> candidateColors})
-  ```
-
-  Note how `targetColor` and `candidateColors` are not mentioned in the one line description, but
-  you still know what they are. All documentation comments carry limited context, use it.
-
-  __Example 02__
-
-  ```dart
-  /// Generate a color palette from a seed color.
-  ///
-  /// ### Args
-  /// - `minHueDist`, `maxHueDist`: Minimum/Maximum distance between any two
-  /// color palette hues in deg.
-  ///
-  /// - `warningTarget`, `surfaceTarget`, and `highlightTarget`: Target colors
-  /// for warning/surface/highlight colors (see Note).
-  ///
-  /// ### Note
-  /// - If target colors are specified, the closest color to the target is used
-  /// for the corresponding color-function.
-  ///
-  /// - If no target colors are specified, warning, surface and highlight color
-  /// targets are set to red, blue and green respectively.
-  ColorPalette.fromSeed(
-    Color seedColor, {
-    int minHueDist = 90,
-    int maxHueDist = 120,
-    Hct? warningTarget,
-    Hct? surfaceTarget,
-    Hct? highlightTarget,
-  })
-  ```
-
-  `minHueDist`, `maxHueDist`, `warningTarget`, `surfaceTarget`, and `highlightTarget` are not
-  clearly obvious from the method signature, so they are mentioned in the documentation comment.
-  Similarly, only the target colors are mentioned in notes section, because the funcion of
-  `minHueDist` and `maxHueDist` is from the arg-description. The default target colors are an
-  addtional piece of information that may be important to users and hence is added under notes.
-
-- Only use the `[ClassName]` style documentation linking when the specific class is not implied by
-  the context.
-
-  __Example 03__
-
-  ```dart
-  /// Convert an ARGB color to the HCT equivalent.
-  static Hct fromColor(Color color) => Hct.fromInt(color.value);
-  ```
-
-  The one-liner could have been `/// Convert a [Color] to the [Hct] equivalent`, but both `Color`
-  and `Hct` are implied by the context, so they are not mentioned.
-
-### Logging
-
-Consider using one of the following formats for traceability:
-
-```text
-LibraryName/ClassName/MethodName: Message
-
-ClassName/MethodName: Message
-
-ProcessName/MethodName: Message
-```
-
-### Misc
-
-- Use dummy varirables like `_` or `__` when you need to use a variable but don't need its value.
-  This is to avoid the `unused_local_variable` warning.
+specialize for the task at hand and maximize the work area. -->
