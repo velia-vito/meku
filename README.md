@@ -64,6 +64,71 @@ Molecules → Organisms → Templates → Pages:
 
 ### Functional Design Principles
 
+1. **Specialized & Dense Functionality** Consider tool bars and side panes — they have a lot of
+   functionality in limited screen space. It allows for the main work area to be maximized. In
+   short, maximize the work area while keeping the tools of the software visually legible, do this
+   by specializing the UI for the given creative application.
+
+   <center>
+
+   ![Dense Functionality Example—Word with no Ribbon and only Quick Access Toolbar](docs/static-assets/dense_functionality_example.doc.jpg)
+
+   *Fig 1. Microsoft Word, but with dense & legible UI.*
+
+   </center>
+
+   Using Word's Ribbon menu would technically be more functionality dense, but the Ribbon menu is
+   congested, unevenly sized, and harder to instantly read—you still need to stop and search to find
+   something new—it would not be legible.
+
+2. **Organized Hierarchy, Flat Access** Oftentimes, because of the sheer scale of creative tools
+   available to us as creators on a particular software platform, we have to spend multiple minutes
+   searching for the specific tool that you know exists. In Meku, you organize your functionality
+   like you would in any other software, but you also provide a *flat, one-layer deep access
+   alternative*.
+
+   <center>
+
+   ![Organized Hierarchy, Flat Access Example—VS Code Command Palette](docs/static-assets/organized_heirarchy_flat_access_example.doc.jpg)
+
+   *Fig 2. VS Code's Command Palette allows you to access any tool in the software with a single
+   search—flat, one-layer deep access.*
+
+   </center>
+
+   You can find almost any single function or setting or tool in VS Code from the Command Palette.
+   You only need type one keyboard shortcut (`ctrl` + `shift` + `P`) or click on the command palette
+   search bar — one action to find and access any tool. VS Code's command palette is not a perfect
+   solution since not e everything can be accessed but a good solution nonetheless.
+
+<!-- TODO: Add Image Examples -->
+
+3. **Contextual Action** When dealing with an large and overlapping tool-set (e.g. brush vs. pen vs.
+   pencil vs. vector tool), the traditional method is to have the user learn the tools and the many
+   many relevant shortcuts to speed up their workflow. Not only is this a very steep learning curve
+   but it also requires the user to remember a lot of lengthy, intricate, and often arbitrary
+   shortcuts.
+
+   Meku attempts to alleviate this by linking the tools to the context of the user's actions. You
+   can have a small set of shortcuts that map to different but intuitive actions depending on the
+   context. This context based system would also reduce clutter but simply displaying relevant tools
+   instead of the entire tool-set all the time.
+
+4. **Obvious and Verifiable** The obvious part is fairly self-explanatory. In the chance that the purpose of something is not
+clear, the user should have a way to verify if they interpretation is correct. Again, fairly
+self-explanatory.
+
+   > There should be one -- and preferably only one -- obvious way to do something.
+   >
+   > *from [The Zen of Python](https://peps.python.org/pep-0020/)*
+
+4. **Customizable/Flexible** Creative applications are just that -- tool-sets for creating things. THe actual workflow creators
+use vary from person to person and from project to project. It makes sense that the user should be
+able to setup the UI to suit their workflow.
+
+   No wold-changing inspiration here, just things applications like Blender and Clip Studio have been
+doing forever.
+
 ### Design Rationale behind specific elements
 
 The specific choices behind the design of almost every element in Meku is outlined in the
@@ -243,6 +308,7 @@ Use one of the following formats for all Debug Logging:
 3. ```text
     ProcessName/MethodName: Message
    ```
+
 <!-- 
 
 ## Meku's Visual Design
@@ -264,63 +330,3 @@ Mostly Inspired by Teenage Engineering's Minimal Retro-Futurism
 1. Dense Functionality
 
 2. Limited Color Palette -->
-<!-- 
-## Meku's Design Principles
-
-The is the third iteration of Design Principles for Meku. In my personal opinions, the first two
-iterations were too abstract and high-flying rather than practical and useful. I would also like to
-note that this iteration of Design Principles has a lot of overlap within itself. No single
-principle takes precedence over the others. No single principle can be applied in pure isolation.
-
-### 1. Organized Hierarchy, Flat Access
-
-Some creative tool-sets might have many tools, it is practically a compulsory requirement to
-organize them into nested sub-categories. However, this can make it difficult to discover, locate,
-or access the tools you want.
-
-Meku attempts to alleviate this problem by proving alternative means of accessing nested
-details/tools that bypass the need to navigate through the organized hierarchy.
-
-This principle is inspired in particular by VS Code's Command Palette.
-
-### 2. Contextual Action
-
-When dealing with an large and overlapping tool-set, the traditional method is to have the user
-learn the tools and the many many relevant shortcuts to speed up their workflow. Not only is this a
-very steep learning curve but it also requires the user to remember a lot of lengthy, intricate, and
-often arbitrary shortcuts.
-
-Meku attempts to alleviate this by linking the tools to the context of the user's actions. You can
-have a small set of shortcuts that map to different but intuitive actions depending on the context.
-This context based system would also reduce clutter but simply displaying relevant tools instead of
-the entire tool-set all the time.
-
-This is inspired by contextual UI that is common is Game UIs.
-
-### 3. Obvious and Verifiable
-
-The obvious part is fairly self-explanatory. In the chance that the purpose of something is not
-clear, the user should have a way to verify if they interpretation is correct. Again, fairly
-self-explanatory.
-
-> There should be one -- and preferably only one -- obvious way to do something.
->
-> *from [The Zen of Python](https://peps.python.org/pep-0020/)*
-
-This is inspired by common sense.
-
-### 4. Customizable/Flexible
-
-Creative applications are just that -- tool-sets for creating things. THe actual workflow creators
-use vary from person to person and from project to project. It makes sense that the user should be
-able to setup the UI to suit their workflow.
-
-No wold-changing inspiration here, just things applications like Blender and Clip Studio have been
-doing forever.
-
-### 5. Specialized and Uncluttered
-
-The UI should be designed to help the user create what they want. For one, it makes no sense to
-structure a wordprocessors UI like a digital art application. FOr another, I absolutely hate it when
-theres so many toolbars that my work area is reduced to a tiny sliver of screen real estate. So,
-specialize for the task at hand and maximize the work area. -->
