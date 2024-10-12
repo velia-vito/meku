@@ -17,15 +17,15 @@
 <hr/>
 
 メイク /meɪkuː/ (*Romanji **me-ku***) **1. *verb*** form (something) by putting parts together or
-combining substances; create **2. *verb*** cause (something) to exist or come about; bring about.
-**3. *verb*** constitute; amount to; develop into.
+combining substances; create **2. *verb*** cause (something) to exist or come about; bring
+about. **3. *verb*** constitute; amount to; develop into.
 
 <hr/>
 
 <br/>
 
-As the definition implies, Meku is primarily targeted at applications meant for creating things. and
-is inspired by the UIs of creative applications like:
+As the definition implies, Meku is primarily targeted at applications meant for creating things.
+and is inspired by the UIs of creative applications like:
 
 - Code IDE's (eg. VS Code, Dreamweaver, Visual Studio)
 
@@ -52,16 +52,16 @@ Meku is organized based on the
 [Atomic Design Principles](https://bradfrost.com/blog/post/atomic-web-design/) where Atoms →
 Molecules → Organisms → Templates → Pages:
 
-1. **Atoms** The basic building blocks of the UI such as a form label, an input, or a button. Atoms
-   can also include more abstract elements like color palettes, fonts and even more invisible
-   aspects of an interface like animations.
+1. **Atoms** The basic building blocks of the UI such as a form label, an input, or a button.
+   Atoms can also include more abstract elements like color palettes, fonts and even more
+   invisible aspects of an interface like animations.
 
-2. **Molecules** Molecules are groups of atoms bonded together *to serve some purpose*. For example,
-   a form label, input, and button aren’t too useful by themselves, but combine them together and
-   you have a search box.
+2. **Molecules** Molecules are groups of atoms bonded together *to serve some purpose*. For
+   example, a form label, input, and button aren’t too useful by themselves, but combine them
+   together and you have a search box.
 
-3. **Organisms** Organisms are groups of molecules joined together to form a *relatively complex,
-   distinct section of an interface*. For example, a navigation bar.
+3. **Organisms** Organisms are groups of molecules joined together to form a *relatively
+   complex, distinct section of an interface*. For example, a navigation bar.
 
 4. **Templates** Templates are *page-level objects* that place components into a layout to
    communicate information or enable actions.
@@ -75,8 +75,8 @@ Molecules → Organisms → Templates → Pages:
 
 1. **Specialized & Dense Functionality,** Consider tool bars and side panes — they have a lot of
    functionality in limited screen space. It allows for the main work area to be maximized. In
-   short, maximize the work area while keeping the tools of the software visually legible, do this
-   by specializing the UI for the given creative application.
+   short, maximize the work area while keeping the tools of the software visually legible, do
+   this by hyper-specializing the UI for the given creative application.
 
    <p aligh="center"> <br/>
 
@@ -86,15 +86,15 @@ Molecules → Organisms → Templates → Pages:
 
    <br/> </p>
 
-   Using Word's Ribbon menu would technically be more functionality dense, but the Ribbon menu is
-   congested, unevenly sized, and harder to instantly read—you still need to stop and search to find
-   something new—it would not be legible.
+   Using Word's Ribbon menu would technically be more functionality dense, but the Ribbon menu
+   is congested, unevenly sized, and harder to instantly read—you still need to stop and search
+   to find something new—it would not be legible.
 
-2. **Organized Hierarchy, Flat Access,** Oftentimes, because of the sheer scale of creative tools
-   available to us as creators on a particular software platform, we have to spend multiple minutes
-   searching for the specific tool that you know exists. In Meku, you organize your functionality
-   like you would in any other software, but you also provide a *flat, one-layer deep access
-   alternative*.
+2. **Organized Hierarchy, Flat Access,** Oftentimes, because of the sheer scale of creative
+   tools available to us as creators on a particular software platform, we have to spend
+   multiple minutes searching for the specific tool that you know exists. In Meku, you organize
+   your functionality like you would in any other software, but you also provide a *flat,
+   one-layer deep access alternative*.
 
    <p aligh="center"> <br/>
 
@@ -105,21 +105,24 @@ Molecules → Organisms → Templates → Pages:
 
    <br/> </p>
 
-   You can find almost any single function or setting or tool in VS Code from the Command Palette.
-   You only need type one keyboard shortcut (`ctrl` + `shift` + `P`) or click on the command palette
-   search bar — one action to find and access any tool. VS Code's command palette is not a perfect
-   solution since not e everything can be accessed but a good solution nonetheless.
+   You can find almost any single function or setting or tool in VS Code from the Command
+   Palette. You only need type one keyboard shortcut (`ctrl` + `shift` + `P`) or click on the
+   command palette search bar — one action to find and access any tool. VS Code's command
+   palette is not a perfect solution since not e everything can be accessed but a good solution
+   nonetheless.
 
-3. **Contextual Action,** When dealing with an large and overlapping tool-set (e.g. brush vs. pen
-   vs. pencil vs. vector tool), the traditional method is to have the user learn the tools and the
-   many many relevant shortcuts to speed up their workflow. Not only is this a very steep learning
-   curve but it also requires the user to remember a lot of lengthy, intricate, and often arbitrary
-   shortcuts.
+3. **Contextual Action,** When dealing with an large and overlapping tool-set (e.g. brush vs.
+   pen vs. pencil vs. vector tool), the traditional method is to have the user learn the tools
+   and the many many relevant shortcuts to speed up their workflow. Not only is this a very
+   steep learning curve but it also requires the user to remember a lot of lengthy, intricate,
+   and often arbitrary shortcuts.
 
-   Meku attempts to alleviate this by linking the tools to the context of the user's actions. You
-   can have a small set of shortcuts that map to different but intuitive actions depending on the
-   context. This context based system could also reduce clutter but simply displaying relevant tools
-   instead of the entire tool-set all the time.
+   Meku attempts to alleviate this by linking the tools to the context of the user's actions.
+   You can have a small set of shortcuts that map to different but intuitive actions depending
+   on the context. This context based system could also reduce clutter but simply displaying
+   relevant tools instead of the entire tool-set all the time, this contextual tool display
+   combined with a hyper-specialized workspace will provide for very clean uncluttered
+   Workspaces.
 
    <p aligh="center"> <br/>
 
@@ -132,12 +135,12 @@ Molecules → Organisms → Templates → Pages:
 
    Another Wonderful example of contextual action in games is where you press the same key to do
    different actions. Like, for example, pressing `E` to open doors when your crosshair is on a
-   door, pick up items when your crosshair is on an item, or talk to an NPC when your crosshair is
-   on an NPC, etc.
+   door, pick up items when your crosshair is on an item, or talk to an NPC when your crosshair
+   is on an NPC, etc.
 
-4. **Obvious and Verifiable,** The obvious part is fairly self-explanatory. In case that the purpose
-   of something is not clear, the user should have a way to verify if their interpretation is
-   correct. Again, fairly self-explanatory.
+4. **Obvious and Verifiable,** The obvious part is fairly self-explanatory. In case that the
+   purpose of something is not clear, the user should have a way to verify if their
+   interpretation is correct. Again, fairly self-explanatory.
 
    <p aligh="center"> <br/>
 
@@ -155,9 +158,9 @@ Molecules → Organisms → Templates → Pages:
    >
    > *from [The Zen of Python](https://peps.python.org/pep-0020/)*
 
-5. **Customizable/Flexible,** Creative applications are just that—tool-sets for creating things. The
-   actual workflow creators use vary from person to person and from project to project. It makes
-   sense that the user should be able to setup the UI to suit their workflow.
+5. **Customizable/Flexible,** Creative applications are just that—tool-sets for creating things.
+   The actual workflow creators use vary from person to person and from project to project. It
+   makes sense that the user should be able to setup the UI to suit their workflow.
 
    No wold-changing inspiration here, just things applications like Blender and Clip Studio have
    been doing forever.
@@ -185,10 +188,11 @@ PS> dart doc --output docs
 
 ### Library Structure
 
-Meku heavily relies on the `part`/`part of` directives to prevent colossally long files by splitting
-libraries into multiple files. The folder/code structure is as follows:
+Meku heavily relies on the `part`/`part of` directives to prevent colossally long files by
+splitting libraries into multiple files. The folder/code structure is as follows:
 
-1. Each Element of the UI is organized into one of 4 folders (atom, molecule, organism, template):
+1. Each Element of the UI is organized into one of 4 folders (atom, molecule, organism,
+   template):
 
    ```text
    ===========================================
@@ -252,8 +256,8 @@ libraries into multiple files. The folder/code structure is as follows:
 
 ### Variable Naming Conventions
 
-1. - Use dummy variables like `_` or `__` when you need to use a variable but don't need its value.
-     This is to avoid the `unused_local_variable` warning.
+1. - Use dummy variables like `_` or `__` when you need to use a variable but don't need its
+     value. This is to avoid the `unused_local_variable` warning.
 
 ### Documentation Comment Format
 
@@ -283,8 +287,8 @@ libraries into multiple files. The folder/code structure is as follows:
      static Hct closestHue({required Hct targetColor, required List<Hct> candidateColors})
      ```
 
-     Note how `targetColor` and `candidateColors` are not mentioned in the one line description, but
-     you still know what they are. All documentation comments carry limited context, use it.
+     Note how `targetColor` and `candidateColors` are not mentioned in the one line description,
+     but you still know what they are. All documentation comments carry limited context, use it.
 
    - **Example 2** When to use Documentation Sub-Sections.
 
@@ -314,16 +318,16 @@ libraries into multiple files. The folder/code structure is as follows:
      })
      ```
 
-     - `minHueDist`, `maxHueDist`, `warningTarget`, `surfaceTarget`, and `highlightTarget` are not
-       clearly obvious from the method signature, so they are mentioned in the documentation
+     - `minHueDist`, `maxHueDist`, `warningTarget`, `surfaceTarget`, and `highlightTarget` are
+       not clearly obvious from the method signature, so they are mentioned in the documentation
        comment.
 
-     - Similarly, the default target colors are mentioned in notes section as they are an additional
-       pieces of information that may be important to users and not directly relevant to the
-       function.
+     - Similarly, the default target colors are mentioned in notes section as they are an
+       additional pieces of information that may be important to users and not directly relevant
+       to the function.
 
-2. Avoid using the `[ClassName]` style documentation linking when the specific class is implied by
-   the context.
+2. Avoid using the `[ClassName]` style documentation linking when the specific class is implied
+   by the context.
 
    - **Example 3**
 
@@ -332,8 +336,8 @@ libraries into multiple files. The folder/code structure is as follows:
      static Hct fromColor(Color color) => Hct.fromInt(color.value);
      ```
 
-     The one-liner could have been `/// Convert a [Color] to the [Hct] equivalent`, but both `Color`
-     and `Hct` are implied by the context, so they are not mentioned.
+     The one-liner could have been `/// Convert a [Color] to the [Hct] equivalent`, but both
+     `Color` and `Hct` are implied by the context, so they are not mentioned.
 
 ### Logging Format
 
@@ -342,11 +346,9 @@ Use one of the following formats for all Debug Logging:
 1. ```text
     LibraryName/ClassName/MethodName: Message
    ```
-
 2. ```text
     ClassName/MethodName: Message
    ```
-
 3. ```text
     ProcessName/MethodName: Message
    ```
