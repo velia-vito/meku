@@ -1,6 +1,6 @@
 # Meku UI
 
-<center>
+<p aligh="center"> <br/>
 
 | UI Design System     | Use Case                                                                                                     | Visual Style                                                                                                          |
 | -------------------- | ------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------- |
@@ -10,13 +10,19 @@
 | Ant Design           | Focus on efficiency, performance, and a responsive design for enterprise applications                        | Flat design with a focus on simplicity, clarity, and a consistent experience across different (desktop) screen sizes. |
 | Foundation/Bootstrap | Responsivity & Modularity for web applications                                                               | Flat design with a focus on simplicity, clarity, and a consistent experience across different screen sizes.           |
 
-*Table 1. Most UI Libraries are aimed at a very specific use case.*
+<p align="center"> <em> Table 1. Most UI Libraries are aimed at a very specific use case. </em> </p>
 
-</center>
+<br/> </p>
 
-> メイク /meɪkuː/ (*Romanji **me-ku***) **1. *verb*** form (something) by putting parts together or
-> combining substances; create **2. *verb*** cause (something) to exist or come about; bring about.
-> **3. *verb*** constitute; amount to; develop into.
+<hr/>
+
+メイク /meɪkuː/ (*Romanji **me-ku***) **1. *verb*** form (something) by putting parts together or
+combining substances; create **2. *verb*** cause (something) to exist or come about; bring about.
+**3. *verb*** constitute; amount to; develop into.
+
+<hr/>
+
+<br/>
 
 As the definition implies, Meku is primarily targeted at applications meant for creating things. and
 is inspired by the UIs of creative applications like:
@@ -36,6 +42,9 @@ good and help users create what they want without having to fight/learn the appl
 **basically, good Creative Application UI made easy.**
 
 ## Understanding Meku
+
+> ⚠️ Docs generated with dartdoc and/or hosted on pub.dev will not display images, consider
+> reading this document on Github
 
 ### Atomic Design
 
@@ -64,70 +73,103 @@ Molecules → Organisms → Templates → Pages:
 
 ### Functional Design Principles
 
-1. **Specialized & Dense Functionality** Consider tool bars and side panes — they have a lot of
+1. **Specialized & Dense Functionality,** Consider tool bars and side panes — they have a lot of
    functionality in limited screen space. It allows for the main work area to be maximized. In
    short, maximize the work area while keeping the tools of the software visually legible, do this
    by specializing the UI for the given creative application.
 
-   <center>
+   <p aligh="center"> <br/>
 
    ![Dense Functionality Example—Word with no Ribbon and only Quick Access Toolbar](docs/static-assets/dense_functionality_example.doc.jpg)
 
-   *Fig 1. Microsoft Word, but with dense & legible UI.*
+   <p align="center"> <em> Fig 1. Microsoft Word, but with dense & legible UI. </em> </p>
 
-   </center>
+   <br/> </p>
 
    Using Word's Ribbon menu would technically be more functionality dense, but the Ribbon menu is
    congested, unevenly sized, and harder to instantly read—you still need to stop and search to find
    something new—it would not be legible.
 
-2. **Organized Hierarchy, Flat Access** Oftentimes, because of the sheer scale of creative tools
+2. **Organized Hierarchy, Flat Access,** Oftentimes, because of the sheer scale of creative tools
    available to us as creators on a particular software platform, we have to spend multiple minutes
    searching for the specific tool that you know exists. In Meku, you organize your functionality
    like you would in any other software, but you also provide a *flat, one-layer deep access
    alternative*.
 
-   <center>
+   <p aligh="center"> <br/>
 
    ![Organized Hierarchy, Flat Access Example—VS Code Command Palette](docs/static-assets/organized_heirarchy_flat_access_example.doc.jpg)
 
-   *Fig 2. VS Code's Command Palette allows you to access any tool in the software with a single
-   search—flat, one-layer deep access.*
+   <p align="center"> <em> Fig 2. VS Code's Command Palette allows you to access any tool in the
+   software with a single search—flat, one-layer deep access. </em> </p>
 
-   </center>
+   <br/> </p>
 
    You can find almost any single function or setting or tool in VS Code from the Command Palette.
    You only need type one keyboard shortcut (`ctrl` + `shift` + `P`) or click on the command palette
    search bar — one action to find and access any tool. VS Code's command palette is not a perfect
    solution since not e everything can be accessed but a good solution nonetheless.
 
-<!-- TODO: Add Image Examples -->
-
-3. **Contextual Action** When dealing with an large and overlapping tool-set (e.g. brush vs. pen vs.
-   pencil vs. vector tool), the traditional method is to have the user learn the tools and the many
-   many relevant shortcuts to speed up their workflow. Not only is this a very steep learning curve
-   but it also requires the user to remember a lot of lengthy, intricate, and often arbitrary
+3. **Contextual Action,** When dealing with an large and overlapping tool-set (e.g. brush vs. pen
+   vs. pencil vs. vector tool), the traditional method is to have the user learn the tools and the
+   many many relevant shortcuts to speed up their workflow. Not only is this a very steep learning
+   curve but it also requires the user to remember a lot of lengthy, intricate, and often arbitrary
    shortcuts.
 
    Meku attempts to alleviate this by linking the tools to the context of the user's actions. You
    can have a small set of shortcuts that map to different but intuitive actions depending on the
-   context. This context based system would also reduce clutter but simply displaying relevant tools
+   context. This context based system could also reduce clutter but simply displaying relevant tools
    instead of the entire tool-set all the time.
 
-4. **Obvious and Verifiable** The obvious part is fairly self-explanatory. In the chance that the purpose of something is not
-clear, the user should have a way to verify if they interpretation is correct. Again, fairly
-self-explanatory.
+   <p aligh="center"> <br/>
+
+   ![Contextual Action Example—Bladur's Gate 3](docs/static-assets/context_menu_example.doc.jpg)
+
+   <p align="center"> <em> Fig 3. Caites/pavelk Baldur's Gate 3 Better Context Menu Mod—note how the
+   first two actions are specific to the spell scrolls. </em> </p>
+
+   <br/> </p>
+
+   Another Wonderful example of contextual action in games is where you press the same key to do
+   different actions. Like, for example, pressing `E` to open doors when your crosshair is on a
+   door, pick up items when your crosshair is on an item, or talk to an NPC when your crosshair is
+   on an NPC, etc.
+
+4. **Obvious and Verifiable,** The obvious part is fairly self-explanatory. In case that the purpose
+   of something is not clear, the user should have a way to verify if their interpretation is
+   correct. Again, fairly self-explanatory.
+
+   <p aligh="center"> <br/>
+
+   ![Clarification/Verification for UI Elements](docs/static-assets/optional_clarification_example.doc.jpg)
+
+   <p align="center"> <em> Fig 4. The ≤16px font size is something a designer would know, but just
+   in case they don't there's clarification. </em> </p>
+
+   <br/> </p>
+
+   While the entirety of Python Enhancement Proposal #20 is relevant to clarity of presentation
+   followed by optional verification, it is especially served by this epigram:
 
    > There should be one -- and preferably only one -- obvious way to do something.
    >
    > *from [The Zen of Python](https://peps.python.org/pep-0020/)*
 
-4. **Customizable/Flexible** Creative applications are just that -- tool-sets for creating things. THe actual workflow creators
-use vary from person to person and from project to project. It makes sense that the user should be
-able to setup the UI to suit their workflow.
+5. **Customizable/Flexible,** Creative applications are just that—tool-sets for creating things. The
+   actual workflow creators use vary from person to person and from project to project. It makes
+   sense that the user should be able to setup the UI to suit their workflow.
 
-   No wold-changing inspiration here, just things applications like Blender and Clip Studio have been
-doing forever.
+   No wold-changing inspiration here, just things applications like Blender and Clip Studio have
+   been doing forever.
+
+   <p aligh="center"> <br/>
+
+   ![CLiP Studio Paint Workspace 01](docs/static-assets/customizable_workspace_example.doc.jpg)
+
+   <p align="center"> <em> Fig 5. CLiP Studio Paint—Customizable workspaces and tool interfaces.
+   </em> </p>
+
+   <br/> </p>
 
 ### Design Rationale behind specific elements
 
