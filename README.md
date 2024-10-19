@@ -1,6 +1,6 @@
 # Meku UI
 
-<p aligh="center"> <br/>
+<br/>
 
 | UI Design System     | Use Case                                                                                                     | Visual Style                                                                                                          |
 | -------------------- | ------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------- |
@@ -12,17 +12,13 @@
 
 <p align="center"> <em> Table 1. Most UI Libraries are aimed at a very specific use case. </em> </p>
 
-<br/> </p>
+<br/> <hr/>
 
-<hr/>
+メイク /meɪkuː/ (*Romanji **me-ku**, literally 'make'*) **1. *verb*** form (something) by putting
+parts together or combining substances; create **2. *verb*** cause (something) to exist or come
+about; bring about. **3. *verb*** constitute; amount to; develop into.
 
-メイク /meɪkuː/ (*Romanji **me-ku***) **1. *verb*** form (something) by putting parts together or
-combining substances; create **2. *verb*** cause (something) to exist or come about; bring
-about. **3. *verb*** constitute; amount to; develop into.
-
-<hr/>
-
-<br/>
+<hr/> <br/>
 
 As the definition implies, Meku is primarily targeted at applications meant for creating things.
 and is inspired by the UIs of creative applications like:
@@ -69,7 +65,55 @@ Molecules → Organisms → Templates → Pages:
 5. **Pages** Pages are specific instances of templates that show what a UI looks like with real
    content in place.
 
-### Visual Design
+### Visual Design—Art Meca
+
+> ⚠️ This section is subject to change. This initial version seems similar to skeumorphism,
+> which is not a great design style. They also appear to be clashing with the design principles.
+
+<br/> <hr/>
+
+Art Meca /aʁ meka/ (*French **Art Mécanique**, literally 'machine art'*) **1. *noun*** a style
+of art inspired by the aesthetics of audio equipment such as tape-recorders, Walkman's,
+Synthesizers, and Recorders.
+
+<hr/> <br/>
+
+1. **Minimalism**, Cut out everything that doesn't *communicate visually*. Use plenty of blank
+   space. Try to group related control together with regular spacing.
+
+   <br/>
+
+   <p align="center">
+   <img src="docs/static-assets/vui_ex_1_carlhauser_wort.doc.jpg" alt="Carl Hauser's Interface Design for WORT, inspired by old Walkman's and Synths">
+   </p>
+
+   <p align="center"> <em> Fig 1. Carl Hauser's Interface Design for WORT, inspired by old Walkman's
+   and Synths. The upper half is a flip over cover made of leather. Note the minimal number of
+   controls and the regular spacing of said controls.</em> </p>
+
+   <br/>
+
+   When you have a small screen area, you end up with a tight UI such as in the above example.
+   In case of a bigger screen area, prefer using a small section for controls and leaving the
+   rest of the area for the work area (or even blank.)
+
+2. **Analog Audio-Equipment inspired**, Thumb-wheels, sliders, buttons, indicator lights,
+   tape/jog wheels, knobs, narrow display strips, in-work area indicators.
+
+   | Example Device                                                                                                                                                   | Potential Art Meca analogs                                                                                                                                                                                                                                                                                                                                                                                                                                |
+   | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+   | <img src="docs/static-assets/vui_ex_2_te_tp7_feild_recorder.doc.jpg"> <p align="center"> <em> Teenage Engineering TP-7 Field Recorder </em> </p>                 | **1. Tape Wheel/Jog Wheel \[center disk\]** for continuously varying inputs over an arbitrary range (e.g. brush size, transparency,) can be controlled by touch/mouse wheel scroll <br/><br/> **2. Tape Wheel/Jog Wheel \[center disk\]** Playback control (e.g. video/audio playback,) rotating the wheel for seek/rewind; wheel continuously rotates to indicate progress, thereby communicating progress while simultaneously being a control surface. |
+   | <img src="docs/static-assets/vui_ex_3_te_tx6_mixer.doc.jpg"> <p align="center"> <em> Teenage Engineering TX-6 Mixer </em> </p>                                   | **1. Sliders \[bottom area\]** for continuous input over a 2 different related quantities (e.g. volume over frequency, 0 - 100%) can be controlled by touch/mouse wheel scroll. Sliders allow for easy visual reference b/w settings <br/><br/> **2. Knobs \[top area\]** for continuous input over a defined range (e.g. brightness 0 - 100%) can be controlled by touch/mouse wheel scroll. Makes efficient use of Screen space.                        |
+   | <img src="docs/static-assets/vui_ex_4_te_ko2_sequencer_composer.doc.jpg"> <p align="center"> <em> Teenage Engineering KO-2 Sampler/Sequencer/Composer </em> </p> | **1. Indicator lights \[below buttons\]** for on/off status (e.g. showing active tool on a tool palette) <br/><br/>**2. Relational lines/text on control surfaces \[bpm/smaple, meteronome/timing buttons/knobs\]** visually indicates related controls for clarity.                                                                                                                                                                                      |
+
+   <p align="center"> <em> Table 2. Example Devices & Possible Art Meca analogs.</em> </p>
+
+   <br/>
+
+3. **Analoug-first (i.e.) device-input first**, if a function can be mapped onto physical
+   hardware, such a a button-press to a keyboard key, do it. Always try to bring in that
+   tactility into the creation process. The aim is to find a balance between *smoothness* (via
+   removal of extra steps) and *tactility* but making each control physically involved.
 
 ### Functional Design Principles
 
@@ -78,13 +122,15 @@ Molecules → Organisms → Templates → Pages:
    short, maximize the work area while keeping the tools of the software visually legible, do
    this by hyper-specializing the UI for the given creative application.
 
-   <p aligh="center"> <br/>
+   <br/>
 
-   ![Dense Functionality Example—Word with no Ribbon and only Quick Access Toolbar](docs/static-assets/dense_functionality_example.doc.jpg)
+   <p align="center">
+   <img src="docs/static-assets/dense_functionality_example.doc.jpg" alt="Dense Functionality Example—Word with no Ribbon and only Quick Access Toolbar">
+   </p>
 
-   <p align="center"> <em> Fig 1. Microsoft Word, but with dense & legible UI. </em> </p>
+   <p align="center"> <em> Fig 2. Microsoft Word, but with dense & legible UI. </em> </p>
 
-   <br/> </p>
+   <br/>
 
    Using Word's Ribbon menu would technically be more functionality dense, but the Ribbon menu
    is congested, unevenly sized, and harder to instantly read—you still need to stop and search
@@ -96,14 +142,16 @@ Molecules → Organisms → Templates → Pages:
    your functionality like you would in any other software, but you also provide a *flat,
    one-layer deep access alternative*.
 
-   <p aligh="center"> <br/>
+   <br/>
 
-   ![Organized Hierarchy, Flat Access Example—VS Code Command Palette](docs/static-assets/organized_heirarchy_flat_access_example.doc.jpg)
+   <p align="center">
+   <img src="docs/static-assets/organized_heirarchy_flat_access_example.doc.jpg" alt="Organized Hierarchy, Flat Access Example—VS Code Command Palette">
+   </p>
 
-   <p align="center"> <em> Fig 2. VS Code's Command Palette allows you to access any tool in the
+   <p align="center"> <em> Fig 3. VS Code's Command Palette allows you to access any tool in the
    software with a single search—flat, one-layer deep access. </em> </p>
 
-   <br/> </p>
+   <br/>
 
    You can find almost any single function or setting or tool in VS Code from the Command
    Palette. You only need type one keyboard shortcut (`ctrl` + `shift` + `P`) or click on the
@@ -124,14 +172,16 @@ Molecules → Organisms → Templates → Pages:
    combined with a hyper-specialized workspace will provide for very clean uncluttered
    Workspaces.
 
-   <p aligh="center"> <br/>
+   <br/>
 
-   ![Contextual Action Example—Bladur's Gate 3](docs/static-assets/context_menu_example.doc.jpg)
+   <p align="center">
+   <img src="docs/static-assets/context_menu_example.doc.jpg" alt="Contextual Action Example—Bladur's Gate 3">
+   </p>
 
-   <p align="center"> <em> Fig 3. Caites/pavelk Baldur's Gate 3 Better Context Menu Mod—note how the
+   <p align="center"> <em> Fig 4. Caites/pavelk Baldur's Gate 3 Better Context Menu Mod—note how the
    first two actions are specific to the spell scrolls. </em> </p>
 
-   <br/> </p>
+   <br/>
 
    Another Wonderful example of contextual action in games is where you press the same key to do
    different actions. Like, for example, pressing `E` to open doors when your crosshair is on a
@@ -142,14 +192,16 @@ Molecules → Organisms → Templates → Pages:
    purpose of something is not clear, the user should have a way to verify if their
    interpretation is correct. Again, fairly self-explanatory.
 
-   <p aligh="center"> <br/>
+   <br/>
 
-   ![Clarification/Verification for UI Elements](docs/static-assets/optional_clarification_example.doc.jpg)
+   <p align="center">
+   <img src="docs/static-assets/optional_clarification_example.doc.jpg" alt="Clarification/Verification for UI Elements">
+   </p>
 
-   <p align="center"> <em> Fig 4. The ≤16px font size is something a designer would know, but just
+   <p align="center"> <em> Fig 5. The ≤16px font size is something a designer would know, but just
    in case they don't there's clarification. </em> </p>
 
-   <br/> </p>
+   <br/>
 
    While the entirety of Python Enhancement Proposal #20 is relevant to clarity of presentation
    followed by optional verification, it is especially served by this epigram:
@@ -165,14 +217,15 @@ Molecules → Organisms → Templates → Pages:
    No wold-changing inspiration here, just things applications like Blender and Clip Studio have
    been doing forever.
 
-   <p aligh="center"> <br/>
+   <br/>
 
-   ![CLiP Studio Paint Workspace 01](docs/static-assets/customizable_workspace_example.doc.jpg)
+   <p align="center">
+   <img src="docs/static-assets/customizable_workspace_example.doc.jpg" alt="CLiP Studio Paint Workspaces.">
+   </p>
 
-   <p align="center"> <em> Fig 5. CLiP Studio Paint—Customizable workspaces and tool interfaces.
-   </em> </p>
+   <p align="center"> <em> Fig 6. CLiP Studio Paint—Customizable workspaces and tool interfaces.</em> </p>
 
-   <br/> </p>
+   <br/>
 
 ### Design Rationale behind specific elements
 
@@ -352,25 +405,3 @@ Use one of the following formats for all Debug Logging:
 3. ```text
     ProcessName/MethodName: Message
    ```
-
-<!-- 
-
-## Meku's Visual Design
-
-Mostly Inspired by Teenage Engineering's Minimal Retro-Futurism
-
-- Thumb Wheels
-
-- Buttons
-
-- Sliders
-
-- Knobs
-
-- Geometric Shapes delimited by grooves
-
-- clicky circles
-
-1. Dense Functionality
-
-2. Limited Color Palette -->
