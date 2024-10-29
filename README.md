@@ -110,7 +110,43 @@ Synthesizers, and Recorders.
 
    <br/>
 
-3. **Analoug-first (i.e.) device-input first**, if a function can be mapped onto physical
+3. **The Reveal—Dealing with Discrete selection**, most analog controls are meant for continuous
+   intervals/selections (e.g. start to end while cutting audio/video, volume, etc.) but digital
+   applications have a lot of discrete selections (e.g. menu options,) Meku deals with this by
+   discretizing the continuous controls into discrete selections.
+
+   <br/>
+
+   <p align="center">
+   <img src="docs/static-assets/the_reveal.doc.jpg" alt="Quick Schematic of how an analog slider can be repurposed for discrete input.">
+   </p>
+
+   <p align="center"> <em> Fig 2. MS Paint, Quick Schematic of how an analog slider can be repurposed for discrete input.</em> </p>
+
+   <br/>
+
+   For example, consider a drop-down menu, this would be converted into a slider. When the user
+   seeks to choose an option, the surface material is metaphorically pulled back (by means of a
+   glassomorphic opacity reduction) so that they can see the underlying slider and the options
+   marked on it. This can be controlled by mouse scroll, like date pickers in Fluent UI. The
+   "covering surface" is put back on after the selection, simply showing just the selected
+   option.
+
+4. **Flat**, what it says on the tin, no texture, no shadows, no indications of heights and
+   depth. How do you combine this with analog inspiration? Here are some examples:
+
+   - [Conduction Pieces, Ali Zafar Iqbal on Dribble](https://dribbble.com/shots/12516125-Conduction-Pieces)
+     (Too Complex)
+
+   - [Lauering Choices, Ali Zafar Iqbal on Dribble](https://dribbble.com/shots/15469112-Layering-Choices)
+     (Too Complex)
+
+   - [Essentialism, Ali Zafar Iqbal on Dribble](https://dribbble.com/shots/16441526-Essentialism)
+     (Functional)
+
+   All grouping/delineation is done by color & outline.
+
+5. **Analoug-first (i.e.) device-input first**, if a function can be mapped onto physical
    hardware, such a a button-press to a keyboard key, do it. Always try to bring in that
    tactility into the creation process. The aim is to find a balance between *smoothness* (via
    removal of extra steps) and *tactility* but making each control physically involved.
@@ -128,7 +164,7 @@ Synthesizers, and Recorders.
    <img src="docs/static-assets/dense_functionality_example.doc.jpg" alt="Dense Functionality Example—Word with no Ribbon and only Quick Access Toolbar">
    </p>
 
-   <p align="center"> <em> Fig 2. Microsoft Word, but with dense & legible UI. </em> </p>
+   <p align="center"> <em> Fig 3. Microsoft Word, but with dense & legible UI. </em> </p>
 
    <br/>
 
@@ -148,7 +184,7 @@ Synthesizers, and Recorders.
    <img src="docs/static-assets/organized_heirarchy_flat_access_example.doc.jpg" alt="Organized Hierarchy, Flat Access Example—VS Code Command Palette">
    </p>
 
-   <p align="center"> <em> Fig 3. VS Code's Command Palette allows you to access any tool in the
+   <p align="center"> <em> Fig 4. VS Code's Command Palette allows you to access any tool in the
    software with a single search—flat, one-layer deep access. </em> </p>
 
    <br/>
@@ -178,7 +214,7 @@ Synthesizers, and Recorders.
    <img src="docs/static-assets/context_menu_example.doc.jpg" alt="Contextual Action Example—Bladur's Gate 3">
    </p>
 
-   <p align="center"> <em> Fig 4. Caites/pavelk Baldur's Gate 3 Better Context Menu Mod—note how the
+   <p align="center"> <em> Fig 5. Caites/pavelk Baldur's Gate 3 Better Context Menu Mod—note how the
    first two actions are specific to the spell scrolls. </em> </p>
 
    <br/>
@@ -198,7 +234,7 @@ Synthesizers, and Recorders.
    <img src="docs/static-assets/optional_clarification_example.doc.jpg" alt="Clarification/Verification for UI Elements">
    </p>
 
-   <p align="center"> <em> Fig 5. The ≤16px font size is something a designer would know, but just
+   <p align="center"> <em> Fig 6. The ≤16px font size is something a designer would know, but just
    in case they don't there's clarification. </em> </p>
 
    <br/>
@@ -223,7 +259,7 @@ Synthesizers, and Recorders.
    <img src="docs/static-assets/customizable_workspace_example.doc.jpg" alt="CLiP Studio Paint Workspaces.">
    </p>
 
-   <p align="center"> <em> Fig 6. CLiP Studio Paint—Customizable workspaces and tool interfaces.</em> </p>
+   <p align="center"> <em> Fig 7. CLiP Studio Paint—Customizable workspaces and tool interfaces.</em> </p>
 
    <br/>
 
@@ -405,3 +441,22 @@ Use one of the following formats for all Debug Logging:
 3. ```text
     ProcessName/MethodName: Message
    ```
+
+## Markdown Formatting Shortcuts
+
+All markdown is formatted using [mdformat-gfm](https://pypi.org/project/mdformat-gfm/) a python
+cli package that formats markdown files to GitHub Flavored Markdown.
+
+- README.md
+
+  ```ps
+  mdformat --number --wrap 96 ./
+  ```
+
+- Documentaion comments
+
+  ```ps
+  <!-- The documentation comment is copied over to a dummy file.
+  then copied back to the .dart file after formatting -->
+  mdformat --number --wrap 76 ./
+  ```
