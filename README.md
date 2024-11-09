@@ -275,6 +275,20 @@ PS> dart doc --output docs
 
 ## Developing Meku
 
+### Source Control Guidelines
+
+1. All PRs should contain >85% test coverage.
+
+2. All Commits should use the following format (refer commits after `641f28cb` for examples):
+
+   ```text
+   One Line Description of Updates ((see|closes) Issue#)
+
+   [If changes are related to >1 issue] Detailed bullet-list of changes per issue 
+
+   [Optional] Additional Notes
+   ```
+
 ### Library Structure
 
 Meku heavily relies on the `part`/`part of` directives to prevent colossally long files by
@@ -435,9 +449,11 @@ Use one of the following formats for all Debug Logging:
 1. ```text
     LibraryName/ClassName/MethodName: Message
    ```
+
 2. ```text
     ClassName/MethodName: Message
    ```
+
 3. ```text
     ProcessName/MethodName: Message
    ```
