@@ -5,7 +5,7 @@ import 'package:meku/atom/color.dart';
 
 void main(List<String> args) {
   // CHANGE THIS VALUE
-  var sixCharHex = '12664f';
+  var sixCharHex = 'aa0066';
 
   // Create a ColorPalette from the hex value
   var palette = ColorPalette.fromSeed(Color(int.parse("ff$sixCharHex", radix: 16)));

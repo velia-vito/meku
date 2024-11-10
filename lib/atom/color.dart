@@ -1,12 +1,11 @@
 /// ## Color in Meku
 ///
-/// Color in Meku primarily serves Organization/Hierarchy and the Obvious/Verifiable principles. At its
-/// very core, Meku uses only three colors per color theme. One color is used to indicate surfaces and
-/// for neutral applications, one color is used for warnings, errors, and negative situations, and one
-/// color is used for highlights and positive situations.
-///
-/// But before we dive into the technicalities of how color is used across the UI, let's first look at
-/// the choice of color system used by Meku.
+/// Color in Meku primarily serves Obvious/Verifiable principles and minimalist aesthetic. At its
+/// very core, Meku uses only three colors per color theme. One color is used to indicate surfaces
+/// and for neutral applications, one color is used for warnings, errors, and negative situations,
+/// and one color is used for highlights and positive situations. But before we dive into the
+/// technicalities of how color is used across the UI, let's first look at the choice of color
+/// system used by Meku.
 ///
 /// ### The HCT Color System
 ///
@@ -24,14 +23,11 @@
 /// Meku uses 3 Colors:
 ///
 /// - **Neutral**: Used for surfaces and other neutral applications.
-///
 /// - **Positive**: Used for highlights and positive situations.
+/// - **Negative**: Used for warnings, errors, and negative situations. Each color is divided into
+///   11 tones, with 0 being the darkest (black) and 10 being the lightest (white).
 ///
-/// - **Negative**: Used for warnings, errors, and negative situations.
-///
-/// Each color is divided into 11 tones,  with 1 being the darkest (black) and 10 being the lightest (white).
-///
-/// <img src="../static-assets/color_palette_example.jpg" alt="Color System Diagram" width="100%">
+/// <img src="../static-assets/color_palette_example.doc.jpg" alt="Color System Diagram" width="100%">
 library color;
 
 // Dart imports:
